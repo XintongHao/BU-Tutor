@@ -18,7 +18,7 @@ Each Tutor has:
 * Setup route to show form
 * Add basic unstyled form
 
-##Style the tutors page
+## Style the tutors page
 * Add a better header/title
 * Make tutors display in a grid
 
@@ -121,7 +121,7 @@ TODOS
 
 
 
-RESTFUL ROUTES
+## RESTFUL ROUTES
 
 
 <img src="https://github.com/XintongHao/BU-Tutor/blob/master/Version/v1_Hao/image/WX20180323-133944.png"/>
