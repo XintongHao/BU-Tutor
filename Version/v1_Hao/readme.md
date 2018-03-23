@@ -116,7 +116,7 @@ TODOS
 * Random Background Landing Page
 * Refactor middleware
 * change styling in show template - comment delete/update
-* UPDATE/DELETE CAMPGROUND
+* UPDATE/DELETE TUTOR
 
 
 
