@@ -1,99 +1,98 @@
-#YelpCamp
+# BU Tutor
 
-##Initial Setup
+## Initial Setup
 * Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+* Add Tutors Page that lists all tutors
 
-Each Campground has:
+Each Tutor has:
    * Name
-   * Image
+   * Photo
 
-##Layout and Basic Styling
+## Layout and Basic Styling
 * Create our header and footer partials
 * Add in Bootstrap
 
-##Creating New Campgrounds
-* Setup new campground POST route
+## Creating New Tutors
+* Setup new tutor POST route
 * Add in body-parser
 * Setup route to show form
 * Add basic unstyled form
 
-##Style the campgrounds page
+## Style the tutors page
 * Add a better header/title
-* Make campgrounds display in a grid
+* Make tutors display in a grid
 
-##Style the Navbar and Form
+## Style the Navbar and Form
 * Add a navbar to all templates
-* Style the new campground form
+* Style the new tutor form
 
-##Add Mongoose
+## Add Mongoose
 * Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of our routes
+* Setup tutor model
+* Use tutor model inside of our routes
 
-##Show Page
-* Review the RESTful routes we've seen so far
-* Add description to our campground model
+## Show Page
+* Add description to our tutor model
 * Show db.collection.drop()
 * Add a show route/template
 
-##Refactor Mongoose Code
+## Refactor Mongoose Code
 * Create a models directory
 * Use module.exports
 * Require everything correctly!
 
-##Add Seeds File
+## Add Seeds File
 * Add a seeds.js file
-* Run the seeds file every time the server starts
+* Run the seeds file every time the server starts (remove all the tutors)
 
-##Add the Comment model!
+## Add the Comment model!
 * Make our errors go away!
-* Display comments on campground show page
+* Display comments on tutor show page
 
-##Comment New/Create
+## Comment New/Create
 * Discuss nested routes
 * Add the comment new and create routes
 * Add the new comment form
 
-##Style Show Page
+## Style Show Page
 * Add sidebar to show page
 * Display comments nicely
 
-##Finish Styling Show Page
+## Finish Styling Show Page
 * Add public directory
 * Add custom stylesheet
 
-##Auth Pt. 1 - Add User Model
+## Auth Pt. 1 - Add User Model
 * Install all packages needed for auth
 * Define User model 
 
-##Auth Pt. 2 - Register
+## Auth Pt. 2 - Register
 * Configure Passport
 * Add register routes
 * Add register template
 
-##Auth Pt. 3 - Login
+## Auth Pt. 3 - Login
 * Add login routes
 * Add login template
 
-##Auth Pt. 4 - Logout/Navbar
+## Auth Pt. 4 - Logout/Navbar
 * Add logout route
 * Prevent user from adding a comment if not signed in
 * Add links to navbar
 
-##Auth Pt. 5 - Show/Hide Links
+## Auth Pt. 5 - Show/Hide Links
 * Show/hide auth links in navbar 
 
-##Refactor The Routes
+## Refactor The Routes
 * Use Express router to reoragnize all routes
 
-##Users + Comments
+## Users + Comments
 * Associate users and comments
 * Save author's name to a comment automatically
 
-##Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
+## Users + Campgrounds
+* Prevent an unauthenticated user from creating a tutor
+* Save username+id to newly created tutor
 
 
 TODOS
@@ -107,7 +106,7 @@ TODOS
 * Random Background Landing Page
 * Refactor middleware
 * change styling in show template - comment delete/update
-* UPATE/DELETE CAMPGROUND
+* UPATE/DELETE TUTOR
 
 * BOOTSTRAP NAV COLLPASE JS
 * Flash Messages
@@ -117,24 +116,13 @@ TODOS
 * Random Background Landing Page
 * Refactor middleware
 * change styling in show template - comment delete/update
-* UPDATE/DELETE CAMPGROUND
+* UPDATE/DELETE TUTOR
 
 
 
 
-RESTFUL ROUTES
+## RESTFUL ROUTES
 
-name      url      verb    desc.
-===============================================
-INDEX   /dogs      GET   Display a list of all dogs
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
 
-INDEX   /campgrounds
-NEW     /campgrounds/new
-CREATE  /campgrounds
-SHOW    /campgrounds/:id
+<img src="https://github.com/XintongHao/BU-Tutor/blob/master/Version/v1_Hao/image/WX20180323-133944.png"/>
 
-NEW     campgrounds/:id/comments/new    GET
-CREATE  campgrounds/:id/comments      POST
