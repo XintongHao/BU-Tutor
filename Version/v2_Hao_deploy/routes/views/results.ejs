@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BU Tutor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">BU Tutor</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+     
+     
+     <header class="jumbotron">
+         <div class="container">
+             <h1><span class="glyphicon glyphicon-tent"></span> Search Results!</h1>
+             <p>Tutor list based on skills!</p>
+             <a href="/">Search Again!</a>
+
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% tutors.forEach(function(tutor){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= tutor.image %>", style=" width:100%;">
+                   <div class="caption">
+                       <h4>Name: <%= tutor.name %></h4>
+                       <h5>Coding Skill: <%= tutor.description %></h5>
+                       <h5>Technical Skill: <%= tutor.description1 %></h5>
+                   </div>
+                   <!--<p>-->
+                   <!--    <a href="/tutors/<%= tutor._id %>" class="btn btn-primary">More Info</a>-->
+                   <!--</p>-->
+                </div>
+            </div>
+        <% }); %>
+        <a href="/">Search Again!</a>
+    </div>
+
+
+
+
+<!--<h1>Results Page!!!</h1>-->
+
+<!--<ul>-->
+<!--    <% tutors.forEach(function(tutor) { %>-->
+<!--    <li>-->
+<!--        <img src="<%= tutor.image%>"style=" width:50%;">-->
+<!--        <br>-->
+<!--        <strong>-->
+<!--            <%= tutor.description%>-->
+<!--            <br>-->
+<!--            <%= tutor.name%>-->
+<!--        </strong>-->
+<!--    </li>-->
+<!--    <% }) %>-->
+    
+
+<!--</ul>-->
+
+<!--<a href="/">Search Again!</a>-->
+

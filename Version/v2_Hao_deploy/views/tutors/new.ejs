@@ -1,0 +1,101 @@
+<style>
+.select-wrap {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 0 5px;
+  width:200px;
+  background-color:#fff;
+  position:relative;
+}
+.select-wrap label{
+  font-size:8px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 0 8px;  
+  position: absolute;
+  top:6px;
+}
+
+select{
+  background-color: #fff;
+  border:0px;
+  height:50px;
+  font-size: 16px;
+}
+</style>
+
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Build your Tutor Profile!</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/tutors" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Your photo url">
+                </div>
+                <!--<div class="form-group">-->
+                <!--    <input class="form-control" type="text" name="description" placeholder="Your skills">-->
+                <!--</div>-->
+                
+                
+                <div class="form-group">
+                    <!--<input class="form-control" type="text" name="description" placeholder="Your skills">-->
+                    <div class="select-wrap">
+                      <label>Your Coding Language</label>
+                      <select name="description" style="width: 100%;">
+                        <option value="">-----</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">C++</option>
+                        <option value="C#">C#</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="SQL">SQL</option>
+                        <option value="C">C</option>
+                      </select>
+                    </div>                    
+                </div>   
+                
+                <div class="form-group">
+                    <div class="select-wrap">
+                      <label>Your Technical Skill</label>
+                      <select name="description1" style="width: 100%;">
+                        <option value="">-----</option>
+                        <option value="Algorithms">Algorithms</option>
+                        <option value="Android">Android</option>
+                        <option value="APIs">APIs</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="UI/UX">UI/UX</option>
+                      
+                      </select>
+                    </div>                    
+                </div>                   
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="schedule" placeholder="Your Shedule for Tutoring">
+                </div>
+                
+                
+                
+                
+                <div class="form-group">
+                    <p>Upload your resume:</p>
+                    <input type="file" id="myFile" multiple size="50" name="resume" onchange="myFunction()">
+                </div>                
+                
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/tutors">Go Back</a>
+        </div>
+    </div>
+<% include ../partials/footer %>
+
