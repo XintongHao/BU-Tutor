@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">BU Tutor</p>
+            <div class="list-group">
+                <li class="list-group-item active">Basic Information</li>
+                <li class="list-group-item">Background</li>
+                <li class="list-group-item">Experience</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <!--<img class="img-responsive" src="<%= tutor.image %>">-->
+                <img src="<%= tutor.image %>" style=" width:50%;">
+                <div class="caption-full">
+                    <h4><a><%=tutor.name%></a></h4>
+                    <p><strong>Coding Language: </strong><%= tutor.description %></p>
+                    <p><strong>Technical Skill: </strong><%= tutor.description1 %></p>
+                    <p><strong>Tutoring Time: </strong><%= tutor.schedule %></p>
+                    <p>
+                        <em>Submitted By <%= tutor.author.username %></em>
+                    </p>
+                    <% if(currentUser && tutor.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-warning" href="/tutors/<%= tutor._id %>/edit">Edit Profile</a>
+                        <br /><br />
+                        <form id="delete-form" action="/tutors/<%= tutor._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>                    
+                    
+                    <% } %>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/tutors/<%= tutor._id %>/comments/new">Make an Appointment</a>
+                </div>
+                <hr>
+                <% tutor.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= comment.author.username %></strong>
+                            <span class="pull-right"><%= comment.time%></span>
+                       <div>
+                           <%= comment.text %> 
+
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                <form style="display: inline" class="pull-right" action="/tutors/<%=tutor._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger">DELETE</button>
+                                    <a href="/tutors/<%=tutor._id%>/comments/<%=comment._id%>/edit" class="btn btn-xs btn-info">EDIT</a>
+                                </form>
+                            <% } %> 
+                       </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>
