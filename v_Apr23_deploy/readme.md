@@ -1,5 +1,8 @@
 # BU Tutor
 
+[OPEN APP HERE](https://whispering-earth-51586.herokuapp.com/)
+
+
 ## Initial Setup
 * Add Landing Page
 * Add Tutors Page that lists all tutors
@@ -7,6 +10,15 @@
 Each Tutor has:
    * Name
    * Photo
+   * Coding Skill
+   * Technical Skill
+   * Other Skills
+   * Tutoring Time
+   * Comment
+
+Each User has:
+   * BU email (Gmail)
+   * Username
 
 ## Layout and Basic Styling
 * Create our header and footer partials
