@@ -127,6 +127,7 @@ Auth Pt. 3 - Login
 
 ## Add Google Calendar
 * Set up tutoring time in Google Calendar in tutor's profile
+* Add 'Set Your Tutoring Time' function for tutors.
 * Add 'Make Appointments' function for users.
 
 ## Deploy 
