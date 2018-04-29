@@ -76,7 +76,7 @@ Each User has:
 * Add public directory
 * Add custom stylesheet
 
-(## Auth Pt. 1 - Add User Model
+(Auth Pt. 1 - Add User Model
 * Install all packages needed for auth
 * Define User model )
 
@@ -97,7 +97,7 @@ Each User has:
 * Add register routes
 * Add register template
 
-Auth Pt. 3 - Login
+(Auth Pt. 3 - Login
 * Add login routes
 * Add login template )
 
